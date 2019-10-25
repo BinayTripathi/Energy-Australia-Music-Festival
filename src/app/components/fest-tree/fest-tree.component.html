@@ -1,0 +1,52 @@
+<!--<div class="treeview w-20 border">
+  <h1 class="pt-3 pl-3">Folders</h1>
+  <hr>
+  <ul class="mb-1 pl-3 pb-2">
+    <li><i class="fas fa-angle-right rotate"></i>
+      <span><i class="far fa-envelope-open ic-w mx-1"></i>Mail</span>
+      <ul class="nested">
+        <li><i class="far fa-bell ic-w mr-1"></i>Offers</li>
+        <li><i class="far fa-address-book ic-w mr-1"></i>Contacts</li>
+        <li><i class="fas fa-angle-right rotate"></i>
+          <span><i class="far fa-calendar-alt ic-w mx-1"></i>Calendar</span>
+          <ul class="nested">
+            <li><i class="far fa-clock ic-w mr-1"></i>Deadlines</li>
+            <li><i class="fas fa-users ic-w mr-1"></i>Meetings</li>
+            <li><i class="fas fa-basketball-ball ic-w mr-1"></i>Workouts</li>
+            <li><i class="fas fa-mug-hot ic-w mr-1"></i>Events</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div> -->
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title"> ENERGY AUSTRALIA MUSIC FESTIVAL</h2>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary" (click)="getMusicfestivalDetails()">Click Here Visit The Festival</button>
+      </div>
+    </div>     
+
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let eachRecordLabel of recordLabel">
+          {{ eachRecordLabel.name }}    
+
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let eachBand of eachRecordLabel.allBands"> 
+              {{eachBand.name}}
+
+              <ul class="list-group">
+                  <li class="list-group-item" *ngFor="let fest of eachBand.festivalArr"> 
+                      {{fest}}
+                  </li>
+              </ul>
+            </li>
+          </ul>
+      </li>
+    </ul>
+    
+  </div>
